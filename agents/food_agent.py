@@ -6,7 +6,7 @@ from pydantic_ai.common_tools.duckduckgo import duckduckgo_search_tool
 
 # ollama model
 model = OpenAIChatModel(
-    model_name='kimi-k2-thinking:cloud',
+    model_name='glm-5:cloud',
     provider=OllamaProvider(base_url='http://localhost:11434/v1'),
 )
 
