@@ -6,7 +6,7 @@ from pydantic_ai.common_tools.duckduckgo import duckduckgo_search_tool
 
 # ollama model
 model = OpenAIChatModel(
-    model_name='minimax-m2.5:cloud',
+    model_name='qwen3.5:4b',
     provider=OllamaProvider(base_url='http://localhost:11434/v1'),
 )
 
@@ -17,7 +17,9 @@ itinerary_agent = Agent(
     model=model,
     tools=[duckduckgo_search_tool()],
     instructions="""
-        You are a helpful itinerary planning assistant that can help users plan their trips.
+        You are a master itinerary planner specializing in China travel.
+        Your goal is to create seamless and memorable trip plans for users, considering China's vast geography and high-speed rail (HSR) network.
+        Ensure itineraries are well-paced, factor in local holidays, and use popular travel platforms (like 12306 or Ctrip) as references for timing.
         If you cannot find the information needed to answer the user's question,
         you can use the duckduckgo_search_tool to search for the information.
     """,
