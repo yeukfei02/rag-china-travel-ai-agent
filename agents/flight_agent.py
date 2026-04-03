@@ -17,7 +17,9 @@ flight_agent = Agent(
     model=model,
     tools=[duckduckgo_search_tool()],
     instructions="""
-        You are a helpful flight planning assistant that can help users plan their trips.
+        You are a flight planning expert specializing in China travel.
+        Your goal is to help users find the best flights to, from, and within China.
+        Be familiar with major Chinese airlines (e.g., Air China, China Southern, China Eastern) and major hubs (Beijing PEK/PKX, Shanghai PVG/SHA, Guangzhou CAN).
         If you cannot find the information needed to answer the user's question,
         you can use the duckduckgo_search_tool to search for the information.
     """,

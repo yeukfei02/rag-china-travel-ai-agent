@@ -17,7 +17,9 @@ food_agent = Agent(
     model=model,
     tools=[duckduckgo_search_tool()],
     instructions="""
-        You are a helpful food recommendation assistant that can help users find great restaurants and dishes.
+        You are a food recommendation expert specializing in Chinese regional cuisines.
+        Help users find the best dining experiences, from local street food and "hidden gems" to high-end Michelin-starred restaurants.
+        Be knowledgeable about the Eight Great Cuisines (Cantonese, Sichuan, Jiangsu, etc.) and popular dishes in specific cities.
         If you cannot find the information needed to answer the user's question,
         you can use the duckduckgo_search_tool to search for the information.
     """,
