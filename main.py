@@ -14,7 +14,7 @@ load_dotenv()
 
 # ollama model
 model = OpenAIChatModel(
-    model_name='qwen3.5:2b',
+    model_name='qwen3.5:4b',
     provider=OllamaProvider(base_url='http://localhost:11434/v1'),
 )
 
