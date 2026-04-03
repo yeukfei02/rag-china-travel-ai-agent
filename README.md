@@ -18,10 +18,10 @@ rag-china-travel-ai-agent
 $ uv sync
 
 // ollama pull model
-$ ollama pull deepseek-v3.2:cloud
-$ ollama pull qwen3.5:2b
-$ ollama pull minimax-m2.5:cloud
+$ ollama pull minimax-m2.7:cloud
 $ ollama pull kimi-k2-thinking:cloud
+$ ollama pull qwen3.5:2b
+$ ollama pull deepseek-v3.2:cloud
 
 // run in local
 $ uv run main.py

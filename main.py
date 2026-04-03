@@ -14,7 +14,7 @@ load_dotenv()
 
 # ollama model
 model = OpenAIChatModel(
-    model_name='minimax-m2.5:cloud',
+    model_name='minimax-m2.7:cloud',
     provider=OllamaProvider(base_url='http://localhost:11434/v1'),
 )
 
@@ -73,8 +73,14 @@ async def itinerary_search(ctx: RunContext[None], query: str):
 async def rag_search(ctx: RunContext[None], query: str):
     results = get_pinecone_data(query)
 
-    context = "\n".join([f"- {item['text']}" for item in results])
-    return f"Retrieved knowledge:\n{context}"
+    result = ""
+    if results:
+        context = "\n".join([f"- {item['text']}" for item in results])
+        result = f"Retrieved knowledge:\n{context}"
+    else:
+        result = "No relevant knowledge found."
+
+    return result
 
 # query = "Plan a 5 day trip to Guangzhou from Singapore. Reply me in chinese."
 
